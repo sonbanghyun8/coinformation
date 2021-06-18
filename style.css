@@ -1,0 +1,14 @@
+body {
+    color: white
+    background-color:springgreen
+}
+h1 {
+    background-color: teal;
+    text-align: center;
+    margin: 20px;
+    padding: 15px;
+    color: silver;
+}
+h3 {
+    background-color:tomato;
+}
