@@ -1,1 +1,25 @@
-div
+.test001 {
+    height: 1000px;
+}
+.test002 {
+    border: 1px solid silver;
+    padding: 100px;
+}
+li.gnb {
+    display: inline;
+    padding: 15px;
+}
+div.gnb {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    padding: 15px;
+    background-color: white;
+    font: bold 1vw;
+}
+class.gnb {
+    display: inline;
+}
+#main-img-001 {
+    width: 100%;
+}
