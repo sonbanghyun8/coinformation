@@ -22,29 +22,10 @@
 
     <!-- 디스플레이모드 -->
     <div>
-        <input type="button" value="다크모드" onclick="
-            var target = document.querySelector('body')
-            if (this.value === '다크모드') {
-            this.value= '라이트모드';
-            target.style.backgroundColor='black';
-            target.style.color='linen';
-
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while (i < alist.length){
-                alist[i].style.color='powderblue';
-                i = i + 1;
-            }
-            }
-            else {
-            this.value = '다크모드';
-            target.style.backgroundColor='white';
-            target.style.color='black';
-            }
-        ">
+        <input type="button" value="다크모드" onclick="displayToggle(this)">
     </div>
 
-    <!-- 메인 배너 -->
+    <!-- 추천 코인 리스트 -->
     <h2>
         추천 코인 리스트
     </h2>
