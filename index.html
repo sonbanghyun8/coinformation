@@ -1,39 +1,92 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>생활코인</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="title" value="생활코인">
-        <meta name="description" value="울엄마도 쉽게 배우는 디지털머니">
-        <meta name="keywords" value="블록체인, 비트코인, 가상자산, 가상화폐, 암호화폐, 암호자산, 코인, 이더리움, 솔라나">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <!--글로벌 네비게이션 메뉴-->
-        <div class="gnb">
-            <ul>
-                <li class="gnb"><a href="https://www.naver.com">주요 일정</a></li>
-                <li class="gnb"><a href="naver.com">북마크</a></li>
-                <li class="gnb"><a href="naver.com">포스트</a></li>
-            </ul>    
-        </div>
+<head>
+    <title>생활코인</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" value="생활코인">
+    <meta name="description" value="울엄마도 쉽게 배우는 디지털머니">
+    <meta name="keywords" value="블록체인, 비트코인, 가상자산, 가상화폐, 암호화폐, 암호자산, 코인, 이더리움, 솔라나">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!--글로벌 네비게이션 메뉴-->
+    <div class="gnb">
+        <ul>
+            <li class="gnb"><a href="https://www.naver.com">주요 일정</a></li>
+            <li class="gnb"><a href="naver.com">북마크</a></li>
+            <li class="gnb"><a href="naver.com">포스트</a></li>
+        </ul>    
+    </div>
 
-        <!--메인배너-->
-        <img id="main-img-001" src="https://images.unsplash.com/photo-1605523711462-f5d5a6688e84?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=949&q=80">
-        <h1>생활코인</h1>
-        <img src="https://images.unsplash.com/photo-1621504450181-5d356f61d307?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" width= 100px;>
-        <br><h6>울엄마도 쉽게 이해하는 디지털머니</h6>
-        <hr>
+    <!-- 디스플레이모드 -->
+    <div>
+        <input type="button" value="다크모드" onclick="
+            var target = document.querySelector('body')
+            if (this.value === '다크모드') {
+            this.value= '라이트모드';
+            target.style.backgroundColor='black';
+            target.style.color='linen';
 
-        <!--이메일 보내기-->
-        <div class="test002">
-        <a href="mailto:sonbanghyun8@gmail.com">
-            <button m>이메일 보내기</button>
-        </a>
-        </div>
-        <div class="test001">
-        </div>
-        
-    </body>
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while (i < alist.length){
+                alist[i].style.color='powderblue';
+                i = i + 1;
+            }
+            }
+            else {
+            this.value = '다크모드';
+            target.style.backgroundColor='white';
+            target.style.color='black';
+            }
+        ">
+    </div>
+
+    <!-- 메인 배너 -->
+    <h2>
+        추천 코인 리스트
+    </h2>
+    <ul>
+        <script>
+            var recommendations = ['Bitcoin(BTC)', 'Ethereum(ETH)', 'Luna(LUNA)', 'Dogecoin(DOGE)']
+            var i = 0
+            while (i < recommendations.length){
+                document.write('<li>'+recommendations[i]+'</li>');
+                i = i + 1;
+            }
+        </script>
+    </ul>
+    <!-- 트레이딩뷰 차트 -->
+    <h2>
+        실시간 시세 차트
+    </h2>
+    <div class="tradingview-widget-container">
+        <div id="tradingview_6f22f"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+        new TradingView.widget(
+        {
+        "symbol": "COINBASE:BTCUSD",
+        "interval": "D",
+        "timezone": "Asia/Seoul",
+        "theme": "light",
+        "style": "1",
+        "locale": "kr",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "allow_symbol_change": true,
+        "container_id": "tradingview_6f22f"
+    }
+        );
+        </script>
+    </div>
+    <!--이메일 보내기-->
+    <div class="email">
+    <a href="mailto:sonbanghyun8@gmail.com"><button m>이메일 보내기</button>
+    </a>
+
+    
+</body>
 </html>

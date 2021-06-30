@@ -1,10 +1,9 @@
-.test001 {
-    height: 1000px;
-}
-.test002 {
+/* 이메일 보내기 */
+.email {
     border: 1px solid silver;
     padding: 100px;
 }
+/* 글로벌 네비게이션 메뉴 */
 li.gnb {
     display: inline;
     padding: 15px;
@@ -14,7 +13,6 @@ div.gnb {
     position: sticky;
     top: 0px;
     padding: 15px;
-    background-color: white;
     font: bold 1vw;
 }
 class.gnb {
@@ -22,4 +20,13 @@ class.gnb {
 }
 #main-img-001 {
     width: 100%;
+}
+button {
+    font-size: 10px;
+}
+
+/* 디스플레이모드 */
+.displayMode {
+    background-color: black;
+    color: white;
 }
